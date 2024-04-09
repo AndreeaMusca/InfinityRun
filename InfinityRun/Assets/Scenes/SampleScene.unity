@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -325,8 +326,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -396,6 +397,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Player: {fileID: 1702778317}
   _Offset: {x: 0, y: 15, z: -15}
+--- !u!45 &963194230
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: b13109bc4674dd24ebc04b7c12437ad6, type: 2}
 --- !u!1001 &1419658030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,6 +511,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3539564899025148291, guid: e43ebb559c1994648843911e8bfb0bf5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b00ccb208d8c224fabd4b4a88d236d2, type: 2}
     - target: {fileID: 4066672333775189668, guid: e43ebb559c1994648843911e8bfb0bf5, type: 3}
       propertyPath: m_Name
       value: Ground
@@ -528,6 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _MovementSpeed: 20
+  Rigidbody: {fileID: 0}
 --- !u!4 &1702778317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8112647270028353080, guid: 1f03c7f1a8ca70140aaaf000d7092c37, type: 3}
