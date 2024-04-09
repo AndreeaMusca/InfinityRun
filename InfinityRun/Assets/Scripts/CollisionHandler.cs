@@ -1,27 +1,36 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    bool shouldPlayFallSound = true;
+    private int _lives = 3;
+	private Collider _previousCollider = null;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("Asteroid"))
+		Debug.Log(collider.gameObject.tag);
+        if (collider.gameObject.CompareTag("Asteroid"))
         {
+			if (_previousCollider == collider)
+			{
+				return;
+			}
+			_previousCollider = collider;
+			SoundManager.Instance.PlayBumpSound();
+			_lives--;
+			if (_lives == 0)
+			{
+				StartCoroutine(NewMethod());
+				SceneManager.LoadScene(2);
+			}
+		}
+	}
 
-            SoundManager.Instance.PlayBumpSound();
-        }
 
-    }
-
-
-    void Update()
-    {
-        if (transform.position.y <= 0 && shouldPlayFallSound)
-        {
-            SoundManager.Instance.PlayFallSound();
-            shouldPlayFallSound = false;
-        }
-
-    }
+	private IEnumerator NewMethod()
+	{
+		yield return new WaitForSeconds(1.5f);
+		SceneManager.LoadScene(2);
+	}
 }

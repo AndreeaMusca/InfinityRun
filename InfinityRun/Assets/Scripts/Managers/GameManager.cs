@@ -20,7 +20,11 @@ public class GameManager : MonoBehaviour
 		if (Instance != this)
 		{
 			Destroy(gameObject);
-		}
+		}	}
+
+	public void LoadDeathScreen()
+	{
+		SceneManager.LoadScene(2);
 	}
 
 	public void LoadMainLevel()
