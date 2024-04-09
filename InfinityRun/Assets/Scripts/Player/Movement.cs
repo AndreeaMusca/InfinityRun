@@ -28,6 +28,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Rigidbody.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            SoundManager.Instance.PlayJumpSound();
 
         }
     }
