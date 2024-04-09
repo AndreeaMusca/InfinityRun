@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 538729714596265814}
   - component: {fileID: 4339230704326947852}
+  - component: {fileID: 3249920381119679215}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -46,6 +47,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PlayerTransform: {fileID: 8112647270028353080, guid: 1f03c7f1a8ca70140aaaf000d7092c37, type: 3}
+--- !u!114 &3249920381119679215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4066672333775189668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771e0bcccccdb004ebe4dba40ce4c5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Obstacles:
+  - {fileID: 151664, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
+  - {fileID: 141316, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
+  - {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
 --- !u!1 &7309825261145963926
 GameObject:
   m_ObjectHideFlags: 0
