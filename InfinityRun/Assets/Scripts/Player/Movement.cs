@@ -38,8 +38,8 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
         {
-
-            Rigidbody.AddForce(Vector3.up * 8, ForceMode.Impulse);
+            Debug.Log(jumpCount);
+            Rigidbody.AddForce(Vector3.up * 5, ForceMode.Impulse);
             SoundManager.Instance.PlayJumpSound();
             jumpCount++;
         }

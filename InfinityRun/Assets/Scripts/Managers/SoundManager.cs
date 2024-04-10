@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip FallSound;
     public AudioClip BackgroundMusic;
     public AudioClip BumpSound;
+    public AudioClip BonusSound;
 
 
 
@@ -74,6 +75,25 @@ public class SoundManager : MonoBehaviour
     public void PlayBumpSound()
     {
         PlaySound(BumpSound);
+    }
+
+    public void PlayBonusSound()
+    {
+        PlaySound(BonusSound);
+    }
+
+    //dont destroy on load
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 

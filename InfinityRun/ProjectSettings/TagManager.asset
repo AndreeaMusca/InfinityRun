@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Asteroid3
   - Ground
+  - Bonus
   layers:
   - Default
   - TransparentFX
