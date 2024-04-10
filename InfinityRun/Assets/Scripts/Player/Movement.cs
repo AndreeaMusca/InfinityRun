@@ -18,7 +18,12 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        InvokeRepeating(nameof(IncreaseSpeed), 0f, 7f);
+    }
 
+    private void IncreaseSpeed()
+    {
+        _MovementSpeed += 3;
     }
 
     public void GoForward()
@@ -48,9 +53,8 @@ public class Movement : MonoBehaviour
     public void Slide()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput) * MovementSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(horizontalInput, 0f, 0f) * MovementSpeed * Time.deltaTime;
 
         transform.Translate(movement);
     }
