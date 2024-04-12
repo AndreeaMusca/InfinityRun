@@ -28,6 +28,10 @@ public class CollisionHandler : MonoBehaviour
             DisableHeart();
             if (_lives == 0)
             {
+                PlayerScore playerScore = FindObjectOfType<PlayerScore>();
+                playerScore.UpdateHighestScore();
+                playerScore.UpdateLatestScore();
+
                 StartCoroutine(NewMethod());
                 SceneManager.LoadScene(2);
             }
