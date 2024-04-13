@@ -10,6 +10,9 @@ public class FallHandler : MonoBehaviour
         if (transform.position.y <= -3 && shouldPlayFallSound)
         {
             SoundManager.Instance.PlayFallSound();
+            PlayerScore playerScore = FindObjectOfType<PlayerScore>();
+            playerScore.UpdateHighestScore();
+            playerScore.UpdateLatestScore();
             shouldPlayFallSound = false;
             StartCoroutine(NewMethod());
         }
