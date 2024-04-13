@@ -94,9 +94,11 @@ GameObject:
   - component: {fileID: 8112647270028353080}
   - component: {fileID: 4538745851593066024}
   - component: {fileID: 8524070401964398446}
-  - component: {fileID: 4879638648449251793}
+  - component: {fileID: 3549298373205440293}
+  - component: {fileID: 516243706702261580}
   - component: {fileID: 8922257898403539834}
-  - component: {fileID: 2892490257121660788}
+  - component: {fileID: 6345209906254210820}
+  - component: {fileID: 3156795474300586881}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -158,9 +160,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe524c06be2b8b45bb6d37d780d5c1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MovementSpeed: 20
-  Rigidbody: {fileID: 4879638648449251793}
---- !u!54 &4879638648449251793
+  _MovementSpeed: 30
+  Rigidbody: {fileID: 0}
+--- !u!114 &3549298373205440293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916628296503722159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dce047c65ba14e438c4b84dfc68f3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &516243706702261580
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,8 +213,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbacddff2cd91c6438b0d95d5c2f2b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &2892490257121660788
-CapsuleCollider:
+  _FirstHeart: {fileID: 0}
+  _SecondHeart: {fileID: 0}
+  _ThirdHeart: {fileID: 0}
+--- !u!114 &6345209906254210820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916628296503722159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd3030bfded6a14bbe7e1395c551274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TextScore: {fileID: 0}
+  score: 0
+--- !u!65 &3156795474300586881
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -217,11 +248,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.5
-  m_Height: 7.79
-  m_Direction: 1
-  m_Center: {x: 0, y: 3.7, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 5, y: 8, z: 2.5}
+  m_Center: {x: 0, y: 4, z: 0}
 --- !u!1 &2198994428563330287
 GameObject:
   m_ObjectHideFlags: 0
