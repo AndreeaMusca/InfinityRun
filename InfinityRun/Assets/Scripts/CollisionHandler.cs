@@ -12,6 +12,8 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] private GameObject _SecondHeart;
     [SerializeField] private GameObject _ThirdHeart;
 
+    [SerializeField] private ParticleSystem _Impact;
+
 
     private void OnTriggerEnter(Collider collider)
     {
@@ -22,7 +24,8 @@ public class CollisionHandler : MonoBehaviour
             {
                 return;
             }
-            _previousCollider = collider;
+            _Impact.Play();
+			_previousCollider = collider;
             SoundManager.Instance.PlayBumpSound();
             _lives--;
             DisableHeart();
